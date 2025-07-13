@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React, { useState } from "react";
+import "./App.css";
+import User from "./User";
+import Collage from "./Collage";
+import Student from "./Student";
 function App() {
-  const [count, setCount] = useState(0)
+  // let user1 = {
+  //   name: "Vaibhav Rokade",
+  //   age: 29,
+  // };
+
+  // let user2 = {
+  //   name: "Aditya Fatke",
+  //   age: 33,
+  // };
+
+  const collageName = [
+    { name: "Vaibhav" },
+    { name: "Aditya" },
+    { name: "Vikas" },
+  ];
+
+  const [student, setStudent] = useState(" Vaibhav Rokade");
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>App Components</h1>
+      {/* <User user={user1} id={"1"} />
+
+      <User user={user2} id={"2"} /> */}
+
+      {/* <Collage names={collageName} /> */}
+
+      <Student name={student} />
+
+      <button
+        onClick={() =>
+          setStudent(
+            student === "Aditya Fatke" ? "Vaibhav Rokade" : "Aditya Fatke"
+          )
+        }
+      >
+        update student name
+      </button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
