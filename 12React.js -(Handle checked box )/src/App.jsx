@@ -1,11 +1,13 @@
 import React from "react";
 import Skills from "./Skills";
+import Checkbox from "./Checkbox";
 
 function App() {
   return (
     <>
-      <h1>Handle Cheak boxes in React.js</h1>
-      <Skills />
+      {/* <Skills /> */}
+
+      <Checkbox />
     </>
   );
 }
