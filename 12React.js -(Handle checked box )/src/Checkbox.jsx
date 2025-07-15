@@ -5,13 +5,13 @@ function Checkbox() {
     <>
       <h1>Manipulate Checked box Data </h1>
 
-      <input type="text" placeholder="Enter a Name" />
+      <input type="checkbox" />
       <br />
       <br />
-      <input type="text" placeholder="Enter a Password" />
+      <input type="checkbox" />
       <br />
       <br />
-      <input type="text" placeholder="Enter a Email" />
+      <input type="checkbox" />
     </>
   );
 }
