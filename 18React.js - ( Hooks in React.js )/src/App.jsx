@@ -12,7 +12,7 @@ function App() {
           Hooks
         </li>
       </ul>
-      <h3>Popular Hooks in React </h3>
+      <h3>Popular Hooks in React</h3>
       <ol>
         <li>useState</li>
         <li>useEffect</li>
