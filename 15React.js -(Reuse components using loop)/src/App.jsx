@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 function App() {
   const userData = [
@@ -36,6 +37,11 @@ function App() {
   return (
     <>
       <h1>Compoenent Reuse in loops </h1>
+      <div className="box">
+        {userData.map((user) => (
+          <Card {...user} key={user.id} />
+        ))}
+      </div>
     </>
   );
 }
