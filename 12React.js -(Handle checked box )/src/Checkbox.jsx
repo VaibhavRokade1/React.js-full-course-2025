@@ -8,7 +8,6 @@ function Checkbox() {
       setSklils([...Skills, e.target.value]);
     } else {
       console.log(Skills);
-
       setSklils([...Skills.filter((elemt) => elemt != e.target.value)]);
     }
   };
