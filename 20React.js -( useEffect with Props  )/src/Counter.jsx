@@ -5,8 +5,12 @@ function Counter({ counter, data }) {
   };
 
   useEffect(() => {
-    Display();
+    // Display();
   }, []);
+
+  useEffect(() => {
+    Display();
+  }, [data]);
   return (
     <>
       <h1>Counter Data</h1>
