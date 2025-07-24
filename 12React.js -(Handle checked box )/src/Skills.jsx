@@ -4,13 +4,11 @@ function Skills() {
   const [Skills, setSkills] = useState([]);
 
   const handleSkills = (e) => {
-    console.log(e.target.value, e.target.checked);
+    // console.log(e.target.value, e.target.checked);
 
     if (e.target.checked) {
       setSkills([...Skills, e.target.value]);
     } else {
-      console.log(Skills.filter((item) => item != e.target.value));
-
       setSkills([...Skills.filter((item) => item != e.target.value)]);
     }
 
