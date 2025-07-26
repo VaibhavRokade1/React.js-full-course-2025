@@ -1,4 +1,3 @@
-import React from "react";
 import img from "./assets/ProfileImage.jpeg";
 
 // globlely function but same name function present in a local app component scope.
