@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 function App() {
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState("");
+
+  const handleUser = () => {
+    setUsers([...users, user]);
+  };
+
+  const total = users.length;
+  const last = users[users.length - 1];
+  let unique = [...new Set(users)].length;
   return (
     <>
       <h1>Derived State</h1>
-      <ul>
-        <li>
-          State that is calculated or derived form the onthor state value or
-          props within your components.
-        </li>
-        <li>Derived state can be a variable</li>
-        <li>No Need to extra state only variable and constants are enough</li>
-      </ul>
+
+      <h3>Total Users : {total}</h3>
+      <h3>Last User : {last}</h3>
+      <h3>Unique Users : {unique}</h3>
+      <input
+        type="text"
+        name=""
+        id=""
+        placeholder="Enter User Name"
+        onChange={(e) => {
+          setUser(e.target.value);
+        }}
+      />
+      <button onClick={handleUser}>Add User </button>
+
+      {users.map((index, item) => {
+        return <h3 key={item}>{index}</h3>;
+      })}
     </>
   );
 }
