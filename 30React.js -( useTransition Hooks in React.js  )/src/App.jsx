@@ -2,6 +2,7 @@ import React, { useState, useTransition } from "react";
 import "./App.css";
 function App() {
   const [pending, startTransition] = useTransition();
+
   const handleSubmit = async () => {
     startTransition(async (res) => {
       await new Promise((res) => setTimeout(res, 2000));
