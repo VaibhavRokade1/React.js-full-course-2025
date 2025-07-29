@@ -13,10 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-input {
-  padding: 10px;
-  width: 50%;
-}
 a {
   font-weight: 500;
   color: #646cff;
