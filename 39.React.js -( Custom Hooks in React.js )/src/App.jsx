@@ -1,9 +1,22 @@
 import React from "react";
-
+import "./App.css";
+import Collage from "./Collage";
 function App() {
   return (
     <>
-      <h1>Custom Hooks in React.js</h1>
+      <div
+        style={{
+          background: "skyblue",
+          color: "black",
+          padding: "10px",
+          borderRadius: "20px",
+        }}
+      >
+        <h1>Main App Component</h1>
+
+        <h4>Subject : </h4>
+        <Collage />
+      </div>
     </>
   );
 }
