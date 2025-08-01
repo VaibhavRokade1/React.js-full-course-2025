@@ -1,6 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { SubjectContext } from "./useUserContaxt";
 
 function Subject() {
+  const subject = useContext(SubjectContext);
+
   return (
     <div
       style={{
@@ -10,7 +14,7 @@ function Subject() {
         borderRadius: "20px",
       }}
     >
-      <h2>Subject : {}</h2>
+      <h2>Subject : {subject}</h2>
     </div>
   );
 }
