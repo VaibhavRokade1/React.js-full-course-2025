@@ -20,9 +20,6 @@ function App() {
 
         {/* Search Bar */}
         <SearchBar />
-
-        {/* GitHub User Card */}
-        <Github />
       </main>
     </div>
   );
