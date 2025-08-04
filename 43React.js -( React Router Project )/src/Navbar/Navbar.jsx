@@ -1,49 +1,50 @@
 import React from "react";
 import { Bell, Settings, User } from "lucide-react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <nav className="bg-green-100 shadow-md px-6 py-4 flex items-center justify-between">
+    <nav className="bg-gradient-to-r from-green-50 to-green-100 px-6 md:px-24 py-4 flex items-center justify-between shadow-xl z-[50] relative">
       {/* Logo */}
-      <div className="text-2xl font-bold text-green-800 tracking-wide">
+      <div className="text-3xl font-extrabold text-green-800 tracking-wide">
         AgriGrow 🌾
       </div>
 
       {/* Navigation Links */}
-      <div className="hidden md:flex space-x-8 text-green-900 font-medium text-sm">
-        <a href="/" className="hover:text-green-700 transition duration-200">
+      <div className="hidden md:flex space-x-10 text-green-900 font-medium text-base">
+        <Link to="/" className="hover:text-green-700 transition duration-300">
           Home
-        </a>
-        <a
-          href="/about"
-          className="hover:text-green-700 transition duration-200"
+        </Link>
+        <Link
+          to="/about"
+          className="hover:text-green-700 transition duration-300"
         >
           About
-        </a>
-        <a
-          href="/services"
-          className="hover:text-green-700 transition duration-200"
+        </Link>
+        <Link
+          to="/services"
+          className="hover:text-green-700 transition duration-300"
         >
           Services
-        </a>
-        <a
-          href="/contact"
-          className="hover:text-green-700 transition duration-200"
+        </Link>
+        <Link
+          to="/contact"
+          className="hover:text-green-700 transition duration-300"
         >
           Contact
-        </a>
+        </Link>
       </div>
 
       {/* Icons */}
       <div className="flex items-center space-x-4 text-green-800">
-        <button className="p-2 rounded-full hover:bg-green-200 transition">
-          <Bell size={20} />
+        <button className="p-2 rounded-full hover:bg-green-200 transition duration-300 shadow-md">
+          <Bell size={22} />
         </button>
-        <button className="p-2 rounded-full hover:bg-green-200 transition">
-          <Settings size={20} />
+        <button className="p-2 rounded-full hover:bg-green-200 transition duration-300 shadow-md">
+          <Settings size={22} />
         </button>
-        <button className="p-2 rounded-full hover:bg-green-200 transition">
-          <User size={20} />
+        <button className="p-2 rounded-full hover:bg-green-200 transition duration-300 shadow-md">
+          <User size={22} />
         </button>
       </div>
     </nav>
