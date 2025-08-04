@@ -1,0 +1,20 @@
+.animated-border {
+  position: relative;
+  padding: 8px; /* space for the border */
+  border-radius: 1.5rem; /* match image */
+  background: linear-gradient(270deg, #6ee7b7, #34d399, #10b981, #6ee7b7);
+  background-size: 600% 600%;
+  animation: borderMove 6s ease infinite;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
