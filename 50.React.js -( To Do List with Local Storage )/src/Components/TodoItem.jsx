@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTodo } from "../Context";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function TodoItem({ todo }) {
   const [isTodoEditable, setIsTodoEditable] = useState(false);
@@ -10,6 +11,10 @@ function TodoItem({ todo }) {
   const editTodo = () => {
     updateTodo(todo.id, { ...todo, todo: todoMsg });
     setIsTodoEditable(false);
+    toast.info("Task Updated Successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
   };
   const toggleCompleted = () => {
     toggleComplete(todo.id);
@@ -17,7 +22,10 @@ function TodoItem({ todo }) {
 
   const deletemyTodo = () => {
     deleteTodo(todo.id);
-    // toast.error("Todo Deleted!");
+    toast.error("Task Delete Successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
   };
 
   return (
@@ -62,7 +70,6 @@ function TodoItem({ todo }) {
       >
         ❌
       </button>
-      <ToastContainer />
     </div>
   );
 }

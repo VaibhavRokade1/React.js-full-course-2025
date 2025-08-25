@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTodo } from "../Context";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function TodoForm() {
   const [todo, setTodo] = useState("");
   const { addTodo } = useTodo();
-
   const add = (e) => {
     e.preventDefault();
 
     if (!todo) return;
 
     addTodo({ todo, completed: false });
-    toast.success("Task Added Successfully...");
+
+    toast.success("Task Added Successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+
     setTodo("");
   };
 
@@ -31,7 +36,6 @@ function TodoForm() {
       >
         Add
       </button>
-      <ToastContainer />
     </form>
   );
 }
