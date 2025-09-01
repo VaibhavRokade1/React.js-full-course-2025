@@ -45,7 +45,7 @@ function Todos() {
               </div>
 
               <div className="flex gap-2">
-                {editId == null ? (
+                {editId == null || editId !== todo.id ? (
                   <button
                     onClick={() => handleEdit(todo)}
                     className="bg-indigo-500  text-center text-white items-center font-medium px-2 py-1 rounded-md hover:bg-indigo-600 transition text-sm"
