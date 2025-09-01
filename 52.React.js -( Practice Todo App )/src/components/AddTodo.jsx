@@ -7,6 +7,7 @@ function AddTodo() {
   const handleAddTodo = (e) => {
     e.preventDefault();
     dispatch(addTodos(input));
+    setInput("");
   };
 
   return (
