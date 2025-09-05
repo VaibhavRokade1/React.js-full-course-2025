@@ -6,10 +6,9 @@ const Header = () => {
       <div className="header-contents">
         <h2>Order your favourite food here</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi dolore
-          delectus ullam fugiat porro ratione voluptatem ea aliquid minima
-          numquam? Amet inventore ducimus neque quisquam ipsum accusamus officia
-          aliquid nihil.
+          Whether you're in the mood for a quick snack or a full-course meal,
+          we've got something to satisfy every craving. Fast delivery, fresh
+          ingredients, and flavors you'll love—just a few clicks away.
         </p>
         <button>View menu</button>
       </div>
