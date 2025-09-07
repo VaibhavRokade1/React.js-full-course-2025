@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .navbar .logo {
@@ -10,17 +11,24 @@
   margin-top: -5px;
 }
 
+/* Menu */
 .navbar-menu {
   display: flex;
   list-style: none;
   gap: 23px;
   color: #49557e;
   font-size: 18px;
+  transition: all 0.3s ease;
 }
 .navbar-menu li:hover {
   cursor: pointer;
 }
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
 
+/* Right Side */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -36,20 +44,13 @@
   border-radius: 50px;
   transition-duration: 0.3s;
 }
-
 .navbar button:hover {
   background: #fff4f2;
-}
-
-.navbar .active {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #49557e;
 }
 
 .navbar-search-icon {
   position: relative;
 }
-
 .navbar-search-icon .dot {
   position: absolute;
   min-width: 10px;
@@ -58,4 +59,46 @@
   border-radius: 50%;
   top: 4px;
   right: -6px;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #49557e;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-right {
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
