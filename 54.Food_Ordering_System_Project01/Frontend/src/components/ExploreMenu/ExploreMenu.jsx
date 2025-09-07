@@ -3,7 +3,7 @@ import "./ExploreMenu.css";
 import { menu_list } from "../../assets/frontend_assets/assets";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
-    <>
+    <div>
       <div className="explore-menu" id="explore-menu">
         <h1>Explore our menus</h1>
         <p className="explore-menu-text">
@@ -12,17 +12,17 @@ const ExploreMenu = ({ category, setCategory }) => {
           libero provident? Magni corpo
         </p>
         <div className="explore-menu-list">
-          {menu_list.map((item, i) => {
+          {menu_list.map((item, index) => {
             return (
-              <>
+              <div key={index}>
                 <div
+                  key={index}
                   className="explore-menu-list-item"
                   onClick={() =>
                     setCategory((prev) =>
                       prev === item.menu_name ? "All" : item.menu_name
                     )
                   }
-                  key={i}
                 >
                   <img
                     src={item.menu_image}
@@ -31,13 +31,13 @@ const ExploreMenu = ({ category, setCategory }) => {
                   />
                   <p>{item.menu_name}</p>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
         <hr />
       </div>
-    </>
+    </div>
   );
 };
 
