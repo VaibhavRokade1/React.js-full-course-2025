@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Brand */}
         <div className="footer-brand">
           <h2>🍅 Tomato</h2>
           <p>
@@ -14,7 +13,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Links */}
         <div className="footer-links">
           <h3>Explore</h3>
           <ul>
@@ -33,7 +31,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Support */}
         <div className="footer-support">
           <h3>Support</h3>
           <ul>
@@ -49,7 +46,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div className="footer-contact">
           <h3>Get in Touch</h3>
           <p>📍 Ahmednagar, Maharashtra</p>
@@ -64,7 +60,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} FoodieExpress. All rights reserved.</p>
       </div>
