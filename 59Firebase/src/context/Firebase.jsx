@@ -24,7 +24,6 @@ export const useFirebase = () => useContext(FirebaseContext);
 
 export const FirebaseProvider = ({ childern }) => {
   const putData = (key, data) => set(ref(Database, key), data);
-
   const signUpUserWithEmailAndPassword = (email, password) => {
     return createUserWithEmailAndPassword(FirebaseAuth, email, password);
   };
