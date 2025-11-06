@@ -1,15 +1,17 @@
 import React from "react";
 import UserContextProvider from "./Context/UserContextProvider";
-import Login from "./User/Login";
-import Profile from "./User/Profile";
+// import Login from "./User/Login";
+// import Profile from "./User/Profile";
+// import Compoenet1 from "./components/Compoenet1";
+// import DemoContextProvider from "./Context/DemoContextProvider";
+import CounterContextProvider from "./Context/CounterContextProvider";
+import CounterApp from "./CounterApp/CounterApp";
 
 function App() {
   return (
-    <UserContextProvider>
-      <h1 className="text-center text-3xl font-bold">useContext API</h1>
-      <Login />
-      <Profile />
-    </UserContextProvider>
+    <CounterContextProvider>
+      <CounterApp />
+    </CounterContextProvider>
   );
 }
 
