@@ -14,6 +14,7 @@ function TodoItem({ todo }) {
     toast.info("Task Updated Successfully!", {
       position: "top-right",
       autoClose: 2000,
+      theme: "dark",
     });
   };
   const toggleCompleted = () => {
@@ -25,6 +26,7 @@ function TodoItem({ todo }) {
     toast.error("Task Delete Successfully!", {
       position: "top-right",
       autoClose: 2000,
+      theme: "dark",
     });
   };
 
